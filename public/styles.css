@@ -1,0 +1,61 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 125%;
+  line-height: 1.4;
+  font-family: 'Caveat', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto 2fr;
+  grid-template-areas:
+    "header header header"
+    "add-tasks update-task delete-task"
+    "tasks tasks tasks";
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem;
+  background-color: hsla(157, 70%, 53%, 0.436);
+  /*background-image: url("/images/background.jpg");*/
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+[data-position="header"] {
+  grid-area: header;
+}
+
+[data-position="add-tasks"] {
+  grid-area: add-tasks;
+}
+
+[data-position="update-tasks"] {
+  grid-area: update-tasks;
+}
+
+[data-position="delete-tasks"] {
+  grid-area: delete-tasks;
+}
+
+[data-position="tasks"] {
+  grid-area: tasks;
+  overflow: scroll;
+}
+
+[data-position] {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2 {
+  margin: 0;
+}

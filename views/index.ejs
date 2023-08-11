@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+    <h1 data-position="header">To-do List!</h1>
+
+    <section data-position="add-task">
+    <h2>Add item</h2>
+    <form action="/tasks" method="post">
+        <input type="text" placeholder="task" name="task">
+        <button type="submit">Submit</button>
+    </form>
+    </section>
+
+    <section data-position='update-task'>
+    <div>
+        <h2>Update List!</h2>
+        <p>
+          Replace to-do item with "Completed" or edit task.
+        </p>
+        <button id="update-button">Update task</button>
+      </div>
+    </section>
+
+    <section data-position='delete-task'>
+      <div>
+        <h2>Remove Item!</h2>
+        <p>
+          Delete task. Does nothing if there are no more tasks.
+        </p>
+        <button id="delete-button">Delete task</button>
+        </div>  
+        <div id="message"></div>
+    </section>
+    
+    <section data-position='tasks'>
+    <h2>Tasks</h2>
+    <ul class="tasks">
+         <!-- Loop through tasks -->
+        <% for(let i = 0; i < tasks.length; i++){%>
+            <li class="task">
+                 <!-- Output name from the iterated quote object -->
+                <span><%= tasks[i].name %></span>:
+                  <!-- Output quote from the iterated quote object -->
+                <span><%= tasks[i].quote %></span>
+            </li>
+        <% } %>
+    </ul>
+    </section>
+    
+
+      <script src="/main.js"></script>
+</body>
+</html>
