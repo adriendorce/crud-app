@@ -2,9 +2,10 @@
 
 Simple fullstack web app
 
-**Link to project:** https://
+**Link to project:** https://adriendorce.com
 
-![simple-web-app]()
+<img width="400" alt="crud-app-screenshot" src="https://github.com/adriendorce/crud-app/assets/117544619/633ba7e2-86bf-4754-8fb5-241e9e0673d3">
+
 
 
 ## How It's Made:
@@ -15,7 +16,7 @@ My learning was focused on server side JavaScript. I used Node.js, Express, and 
 
 ## Optimizations
 
-Make the app look better by adding (more) CSS.  Add new tasks through an input, which users can then edit or delete. 
+Make the app look better by adding (more) CSS and functionality.  Add new tasks through an input, which users can then edit or delete. 
 
 
 ## Lessons Learned:
